@@ -9,3 +9,4 @@ sudo virt-install \
  --graphics none \
  --network network=default,model=virtio \
  --import 
+ --check path_in_use=off
