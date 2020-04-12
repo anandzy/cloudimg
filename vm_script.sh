@@ -25,5 +25,6 @@ EOF
 sudo mkdir -p /etc/systemd/system/docker.service.d
 
 # Restart docker.
+sudo usermod -aG docker $USER
 sudo systemctl daemon-reload
 sudo systemctl restart docker
