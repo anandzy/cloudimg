@@ -1,6 +1,6 @@
 sudo virt-install \
  --name vm_name \
- --memory 1024 \
+ --memory 5120 \
  --disk /var/lib/libvirt/images/U18.04.img,device=disk,bus=virtio \
  --disk /var/lib/libvirt/images/cloud.img,device=cdrom \
  --os-type linux \
