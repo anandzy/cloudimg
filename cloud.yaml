@@ -1,0 +1,57 @@
+#cloud-config
+password: ubuntu
+chpasswd: { expire: False }
+ssh_pwauth: True
+hostname: ubuntu-vm
+
+manage_resolv_conf: true
+
+resolv_conf:
+  nameservers: ['8.8.4.4', '8.8.8.8']
+  options:
+    rotate: true
+    timeout: 1
+
+
+package_update: true
+package_update: true
+
+packages:
+ - tree
+ - wget
+ - jq
+ - vim
+ - curl
+ - mlocate
+ - xclip
+ - git
+ - zip
+ - unzip
+ - tar
+# - netplan
+# - inetutils-traceroute
+# - netcat
+# - inetutils-ping
+# - iputils-ping
+# - docker
+
+runcmd:
+ - "sudo apt-get update && apt-get install -y apt-transport-https ca-certificates curl software-properties-common gnupg2"
+ - "sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -"
+ - 'sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
+ - "sudo apt-get update && apt-get install -y containerd.io=1.2.13-1 docker-ce=5:19.03.8~3-0~ubuntu-$(lsb_release -cs) docker-ce-cli=5:19.03.8~3-0~ubuntu-$(lsb_release -cs)"
+ - 'sudo cat > /etc/docker/daemon.json <<EOF
+    {
+      "exec-opts": ["native.cgroupdriver=systemd"],
+      "log-driver": "json-file",
+      "log-opts": {
+        "max-size": "100m"
+      },
+      "storage-driver": "overlay2"
+    }
+    EOF'
+ - "sudo mkdir -p /etc/systemd/system/docker.service.d"
+ - "sudo systemctl daemon-reload"
+ - "sudo systemctl restart docker"
+
+final_message: "The system is finally up, after $UPTIME seconds. Please exit and try log-in"
