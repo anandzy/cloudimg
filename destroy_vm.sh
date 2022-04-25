@@ -11,4 +11,4 @@ sudo virsh undefine ubuntu18
 sudo rm -rf /var/lib/libvirt/images/cloud.img
 
 #Remove the disk image
-sudo rm -rf /var/lib/libvirt/images/U18.04.img
+sudo rm -rf /var/lib/libvirt/images/ubuntu18.img
