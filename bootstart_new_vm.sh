@@ -6,6 +6,7 @@ mkdir ubuntu18
 cp cloud.txt /var/lib/libvirt/images/
 #Get the cloud image from https://cloud-images.ubuntu.com/
 cd ubuntu18
+rm -rf *
 #Download the cloud image
 wget https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64.img
 #cloud-localds creates a disk-image with user-data and/or meta-data for cloud-init(1).  user-data can contain everything which is supported by cloud-init(1)
