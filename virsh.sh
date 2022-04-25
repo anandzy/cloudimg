@@ -8,5 +8,5 @@ sudo virt-install \
  --virt-type kvm \
  --graphics none \
  --network network=default,model=virtio \
- --import
- --check path_in_use=off
+ #--import
+ #--check path_in_use=off
