@@ -7,6 +7,6 @@ sudo virt-install \
  --os-variant ubuntu18.04 \
  --virt-type kvm \
  --graphics none \
- --network network=nat,model=virbr0 \
+ --network network=default,model=virtio \
  --import
  --check path_in_use=off

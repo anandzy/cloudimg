@@ -13,7 +13,7 @@ cd ../
 sudo cloud-localds /var/lib/libvirt/images/cloud.img cloud.txt
 
 # Converting?
-sudo qemu-img convert -f qcow2 ubuntu18/bionic-server-cloudimg-amd64.img /var/lib/libvirt/images/U18.04.img
+sudo qemu-img convert -f qcow2 ubuntu18/bionic-server-cloudimg-amd64.img /var/lib/libvirt/images/ubuntu18.img
 
 #Creating the virtual machine with script using virsh cli commands
 sudo chmod +x virsh.sh
