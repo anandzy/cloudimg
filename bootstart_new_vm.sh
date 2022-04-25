@@ -3,7 +3,7 @@
 sudo apt install cloud-image-utils virtinst -y
 #Make directory to download and cloud-img files
 mkdir ubuntu18
-cp -r cloud.txt /var/lib/libvirt/images/
+cp cloud.txt /var/lib/libvirt/images/
 #Get the cloud image from https://cloud-images.ubuntu.com/
 cd ubuntu18
 #Download the cloud image
