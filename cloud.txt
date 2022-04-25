@@ -2,7 +2,7 @@
 password: ubuntu
 chpasswd: { expire: False }
 ssh_pwauth: True
-hostname: ubuntu2204
+hostname: ubuntu2004
 
 manage_resolv_conf: true
 
