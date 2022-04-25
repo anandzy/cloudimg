@@ -1,12 +1,13 @@
 sudo virt-install \
  --name ubuntu18 \
  --memory 4024 \
- --disk /var/lib/libvirt/images/U18.04.img,device=disk,bus=virtio \
- --disk /var/lib/libvirt/images/cloud.img,device=cdrom \
+ --disk /var/lib/libvirt/images/ubuntu18.img,device=disk,bus=virtio \
+ --disk /var/lib/libvirt/images/ubuntu.img,device=cdrom \
  --os-type linux \
  --os-variant ubuntu18.04 \
  --virt-type kvm \
  --graphics none \
  --network network=default,model=virtio \
- --import
- --check path_in_use=off
+ --import \
+ --check path_in_use=off \
+ --check disk_size=off
