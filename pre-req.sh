@@ -13,7 +13,7 @@ cd ../
 sudo cloud-localds /var/lib/libvirt/images/ubuntu2004.img cloud.txt
 
 # Converting?
-sudo qemu-img convert -f qcow2 ubuntu22/focal-server-cloudimg-amd64.img /var/lib/libvirt/images/ubuntu2004.img
+sudo qemu-img convert -f qcow2 ubuntu2004/focal-server-cloudimg-amd64.img /var/lib/libvirt/images/ubuntu2004.img
 
 #Creating the virtual machine with script using virsh cli commands
 sudo chmod +x virsh.sh
