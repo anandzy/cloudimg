@@ -2,7 +2,7 @@
 password: ubuntu
 chpasswd: { expire: False }
 ssh_pwauth: True
-hostname: ubuntu18
+hostname: ubuntu2204
 
 manage_resolv_conf: true
 
@@ -39,5 +39,6 @@ runcmd:
  - "curl -fsSL https://get.docker.com -o get-docker.sh; sh get-docker.sh"
  - "sudo usermod -aG docker ubuntu"
  - "sudo systemctl restart docker"
+ - "sudo systemctl enable docker"
 
 final_message: "The system is finally up, after $UPTIME seconds. Please exit and try log-in"
