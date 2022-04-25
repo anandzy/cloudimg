@@ -2,7 +2,7 @@
 password: ubuntu
 chpasswd: { expire: False }
 ssh_pwauth: True
-hostname: ubuntu-vm
+hostname: ubuntu18
 
 manage_resolv_conf: true
 
