@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Create New VM on HOST machine at openshift.truetech.solutions
 
 # Controls when the workflow will run
 on:
@@ -25,15 +25,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 #      - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      # Time of starting Building Cloud Image
+      - name: Starting to run steps
+        run:  echo "Started - `date`"
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
       # DEploy
       - name: Step 1 - Build Cloud Image
         run: sh ./bootstart_new_vm.sh
+
+      # Time of Completion Building Cloud Image
+      - name: Ending executing steps.
+        run: |
+          echo "Completed - `date`"
+          echo "Image saved on Host VM"
