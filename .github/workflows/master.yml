@@ -36,9 +36,8 @@ jobs:
         # Make directory to download and cloud-img files
       - name: Creating repo to save cloud image.
         run:  |
-          mkdir ubuntu18
           cd ubuntu18
-          rm -rf *
+          rm -rf *.img
           cp cloud.txt /var/lib/libvirt/images/
 
         # Install the needfull packages.
@@ -48,7 +47,6 @@ jobs:
         # cloud-localds creates a disk-image with user-data and/or meta-data for cloud-init(1).  user-data can contain everything which is supported by cloud-init(1)
       - name: cloud-localds creates a disk-image with user-data
         run:  |
-          cd ../
           sudo cloud-localds /var/lib/libvirt/images/cloud.img cloud.txt
 
         # qemu-img - QEMU disk image utility.
