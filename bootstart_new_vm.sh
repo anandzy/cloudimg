@@ -14,6 +14,8 @@ cd ../
 sudo cloud-localds /var/lib/libvirt/images/cloud.img cloud.txt
 #qemu-img - QEMU disk image utility
 sudo qemu-img convert -f qcow2 ubuntu18/bionic-server-cloudimg-amd64.img /var/lib/libvirt/images/ubuntu18.img
-#Excuting virsh commands to create VM
+
+exit 0
+#Excuting virsh commands separatly to create VM
 #sudo chmod +x virsh.sh
 #./virsh.sh
