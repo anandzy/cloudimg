@@ -38,8 +38,8 @@ jobs:
         run: sh ./virsh.sh
 
         # Listing VM's
-      - name: Deploying New ubuntu18 VM
-        run: sh ./listing_all_vms    
+      - name: Listing all available VM's with IP's
+        run: sh ./listing_all_vms.sh
 
        # Time of Completion Building Cloud Image
       - name: Ending executing steps.
