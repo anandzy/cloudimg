@@ -33,7 +33,7 @@ jobs:
       - name: Build Cloud Image
         run: sh ./bootstart_new_vm.sh
 
-        # Building cloud Image
+        # Deploying
       - name: Deploying New ubuntu18 VM
         run: sh ./virsh.sh
 
@@ -46,3 +46,16 @@ jobs:
         run: |
           echo "Completed - `date`"
           echo "Image saved on Host VM"
+
+  Deploy:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Deploying
+      - name: Deploying New ubuntu18 VM
+        run: sh ./virsh.sh
