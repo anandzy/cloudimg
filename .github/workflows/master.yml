@@ -29,9 +29,17 @@ jobs:
       - name: Starting to run steps
         run:  echo "Started - `date`"
 
-        # DEploy
-      - name: Step 1 - Build Cloud Image
+        # Building cloud Image
+      - name: Build Cloud Image
         run: sh ./bootstart_new_vm.sh
+
+        # Building cloud Image
+      - name: Deploying New ubuntu18 VM
+        run: sh ./virsh.sh
+
+        # Listing VM's
+      - name: Deploying New ubuntu18 VM
+        run: sh ./listing_all_vms    
 
        # Time of Completion Building Cloud Image
       - name: Ending executing steps.
