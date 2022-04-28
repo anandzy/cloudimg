@@ -1,2 +1,3 @@
-[submodule "https://github.com/anandzy/cloudimg.git"]
-	url = https://github.com/anandzy/cloudimg.git
+[submodule "cloudimg"]
+	path = /anandzy/cloudimg
+	url = git://github.com/anandzy/cloudimg.git
