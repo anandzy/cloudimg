@@ -31,7 +31,7 @@ jobs:
 
         # Listing VM's
       - name: Listing all available VM's with IP's
-        run: sh ./listing_all_vms.sh
+        run: sh ./listing_all_vm_ips.sh
 
        # Time of Completion Building Cloud Image
       - name: Ending executing steps.

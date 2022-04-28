@@ -6,8 +6,10 @@ name: deploy
 on:
   workflow_run:
     workflows: ["build"]
+    types: [requested]
+    branches:
+      - 'master'
 
-  
 jobs:
   Deploy:
     # The type of runner that the job will run on
@@ -18,6 +20,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      # Listing VM's
+      - name: Listing VM with IP before deployment
+        run: sh ./listing_all_vm_ips.sh
+
       # Deploying
       - name: Deploying New ubuntu18 VM
         run: sh ./virsh.sh
+
+      # Listing VM's
+      - name: Listing VM with IP after deployment
+        run: sh ./listing_all_vm_ips.sh
