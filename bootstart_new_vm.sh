@@ -1,6 +1,6 @@
 #!/bin/bash
 #Install the needfull packages.
-sudo apt install cloud-image-utils virtinst -y
+sudo apt install cloud-image-utils virtinst  -y
 #Make directory to download and cloud-img files
 cd ubuntu18
 #cp cloud.txt /var/lib/libvirt/images/

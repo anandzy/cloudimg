@@ -1,1 +1,1 @@
-virsh list --all
+sudo apt-get install libvirt-bin -y
