@@ -1,13 +1,9 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Create New VM on HOST machine at openshift.truetech.solutions
-
+name: build
+#Building Cloud Image  on HOST machine at openshift.truetech.solutions
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -33,10 +29,6 @@ jobs:
       - name: Build Cloud Image
         run: sh ./bootstart_new_vm.sh
 
-        # Deploying
-      - name: Deploying New ubuntu18 VM
-        run: sh ./virsh.sh
-
         # Listing VM's
       - name: Listing all available VM's with IP's
         run: sh ./listing_all_vms.sh
@@ -46,16 +38,3 @@ jobs:
         run: |
           echo "Completed - `date`"
           echo "Image saved on Host VM"
-
-  Deploy:
-    # The type of runner that the job will run on
-    runs-on: self-hosted
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Deploying
-      - name: Deploying New ubuntu18 VM
-        run: sh ./virsh.sh

@@ -1,0 +1,23 @@
+name: deploy
+
+#Deploying New VM on HOST machine at openshift.truetech.solutions
+  
+# Want this wf runs on successfull completion of another workflow build
+on:
+  workflow_run:
+    workflows: ["build"]
+
+  
+jobs:
+  Deploy:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Deploying
+      - name: Deploying New ubuntu18 VM
+        run: sh ./virsh.sh
