@@ -29,10 +29,6 @@ jobs:
       - name: Build Cloud Image
         run: sh ./bootstart_new_vm.sh
 
-        # Listing VM's
-      - name: Listing all available VM's with IP's
-        run: sh ./listing_all_vm_ips.sh
-
        # Time of Completion Building Cloud Image
       - name: Ending executing steps.
         run: |
