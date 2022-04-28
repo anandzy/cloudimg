@@ -1791,5 +1791,9 @@
         "on",
         "jobs"
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "yaml.schemas": {
+        "file:///toc.schema.json": "/toc\\.yml/i",
+        "https://json.schemastore.org/github-workflow.json": "file:///home/anandz/cloudimg/.github/workflows/build.yml"
+    }
 }
