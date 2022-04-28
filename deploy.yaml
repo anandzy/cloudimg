@@ -1,4 +1,4 @@
-name: deploy
+##name: deploy
 
 #Deploying New VM on HOST machine at openshift.truetech.solutions
   
@@ -9,8 +9,9 @@ on:
     types: [requested]
     branches:
       - 'master'
-
 jobs:
+
+needs: build
   Deploy:
     # The type of runner that the job will run on
     runs-on: self-hosted
