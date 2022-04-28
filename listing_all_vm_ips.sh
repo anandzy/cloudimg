@@ -1,4 +1,6 @@
 #!/bin/bash
 
-virsh domifaddr ubuntu18
+sudo virsh list --all
+
+sudo virsh domifaddr ubuntu18
 

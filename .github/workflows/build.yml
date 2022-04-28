@@ -45,9 +45,9 @@ jobs:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         - uses: actions/checkout@v3
 
-        # Listing VM's
-        - name: Listing VM with IP before deployment
-          run: sh ./list_all_vms.sh
+        # Installing dependencies required
+        - name: Installing dependencies required
+          run: sh ./install_dependencies.sh
 
         # Deploying
         - name: Deploying New ubuntu18 VM

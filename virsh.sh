@@ -1,8 +1,8 @@
 sudo virt-install \
  --name ubuntu18 \
  --memory 4024 \
- --disk /var/lib/libvirt/images/ubuntu18.img,device=disk,bus=virtio \
- --disk /var/lib/libvirt/images/ubuntu18c.img,device=cdrom \
+ --disk /var/lib/libvirt/images/ubuntu18.img,device=disk,bus=virtio,size=50 \
+ --disk /var/lib/libvirt/images/ubuntu18c.img,device=cdrom,size=50 \
  --os-type linux \
  --os-variant ubuntu18.04 \
  --virt-type kvm \
