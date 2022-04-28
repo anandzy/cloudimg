@@ -22,7 +22,7 @@ jobs:
 
       # Listing VM's
       - name: Listing VM with IP before deployment
-        run: sh ./listing_all_vm_ips.sh
+        run: sh ./list_all_vms.sh
 
       # Deploying
       - name: Deploying New ubuntu18 VM
@@ -30,4 +30,4 @@ jobs:
 
       # Listing VM's
       - name: Listing VM with IP after deployment
-        run: sh ./listing_all_vm_ips.sh
+        run: sh ./list_all_vms.sh
