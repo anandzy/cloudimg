@@ -55,4 +55,4 @@ jobs:
 
         # Listing VM's
         - name: Listing VM with IP after deployment
-          run: sh ./list_all_vms.sh
+          run: sh ./listing_all_vm_ips.sh
