@@ -15,6 +15,7 @@ sudo cloud-localds /var/lib/libvirt/images/ubuntu18.img ubuntu18/cloud.txt
 sudo qemu-img convert -f qcow2 ubuntu18/bionic-server-cloudimg-amd64.img /var/lib/libvirt/images/ubuntu18c.img
 sudo qemu-img convert -f qcow2 ubuntu18/bionic-server-cloudimg-amd64.img /var/lib/libvirt/images/ubuntu18.img
 
+sudo ls -la /var/lib/libvirt/images/
 exit 0
 #Excuting virsh commands separatly to create VM
 #sudo chmod +x virsh.sh

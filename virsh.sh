@@ -1,3 +1,7 @@
+#!/bin/bash
+
+sudo ls -la /var/lib/libvirt/images/
+
 sudo virt-install \
  --name ubuntu18 \
  --memory 4024 \
@@ -11,3 +15,5 @@ sudo virt-install \
  --import \
  --check path_in_use=off \
  --check disk_size=off
+
+ 
