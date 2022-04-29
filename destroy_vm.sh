@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo ls -la /var/lib/libvirt/images/
 
 #Stop the machine
 sudo virsh destroy ubuntu18
